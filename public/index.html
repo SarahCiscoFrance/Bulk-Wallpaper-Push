@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+	<!-- Required meta tags -->
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
+	<link href="https://use.fontawesome.com/releases/v5.0.3/css/all.css" rel="stylesheet">
+	<link rel="stylesheet" href="css/dropzone.css">
+	<link href="css/noty.css" rel="stylesheet">
+	<link href="css/themes/mint.css" rel="stylesheet">
+	<style>
+		.btn-secondary.active, .btn-secondary:active, .show > .btn-secondary.dropdown-toggle {
+			color: #fff;
+			background-color: #28a745 !important;
+    		border-color: #28a745 !important;
+		}
+	</style>
+	<title>Bulk Wallpaper Push</title>
+</head>
+
+<body>
+	<div class="container-fluid">
+		<div class="jumbotron mt-3 bg-primary text-white p-4 text-center">
+			<h1 class="display-4"><i class="fas fa-cog fa-spin"></i>&nbsp;&nbsp;Bulk Wallpaper Push&nbsp;&nbsp;<i class="fas fa-cog fa-spin"></i></h1>
+			<p class="lead">This interface allows you to update the branding and the background on Cisco endpoints.</p>
+		</div>
+		<div class="row">
+			<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+				<div class="card">
+					<div class="card-body">
+						<h4 class="card-title mb-3">Recommended image size</h4>
+						<table class="table table-bordered table-striped text-center">
+							<thead>
+								<tr>
+									<th scope="col">Type</th>
+									<th scope="col">Size</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Branding</td>
+									<td>272x272</td>
+								</tr>
+								<tr>
+									<td>Halfwake Background</td>
+									<td>3840x2160</td>
+								</tr>
+								<tr>
+									<td>Halfwake Branding</td>
+									<td>272x272</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-6 col-md-12 col-sm-12 col-xs-12">
+				<div class="card">
+					<div class="card-body">
+						<div class="alert alert-warning mb-3 text-center" role="alert" id="alertFormReset"></div>
+						<h4 class="card-title text-center mb-2">Reset all branding background on endpoints</h4>
+						<div class="d-flex flex-wrap justify-content-center" id="endpointsReset"></div>
+						<div class="text-center">
+							<button type="button" id="submitFormReset" class="btn btn-primary mt-4">Reset
+							</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class='row mt-3 mb-3'>
+			<div class="col">
+				<div class="card">
+					<div class="card-body">
+						<div class="alert alert-warning mb-3 text-center" role="alert" id="alertFormUpdate"></div>
+						<div class="row">
+							<div class="col">
+								<h4 class="card-title mb-3 text-center">Import images for desired modes</h4>
+								<div class="row">
+									<div class="col">
+										<div class="card">
+											<div class="card-body">
+												<h5 class="card-title">Branding</h5>
+												<form id="dropzoneBranding" action="/upload" class="dropzone text-center" method="post" enctype="multipart/form-data">
+												</form>
+											</div>
+										</div>
+									</div>
+									<div class="col">
+										<div class="card">
+											<div class="card-body">
+												<h5 class="card-title">Halfwake Background</h5>
+												<form id="dropzoneHBackground" action="/upload" class="dropzone text-center" method="post" enctype="multipart/form-data">
+												</form>
+											</div>
+										</div>
+									</div>
+									<div class="col">
+										<div class="card">
+											<div class="card-body">
+												<h5 class="card-title">Halfwake Branding</h5>
+												<form id="dropzoneHBranding" action="/upload" class="dropzone text-center" method="post" enctype="multipart/form-data">
+												</form>
+											</div>
+										</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class='row'>
+							<div class="col mt-3">
+								<h4 class="card-title text-center">Choose endpoints which you want to update</h4>
+								<div class="row">
+									<div class="col">
+										<div class="d-flex flex-wrap justify-content-center" id="endpoints"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="row">
+							<div class="col">
+								<div class="text-center">
+									<button type="button" id="submitFormUpdate" class="btn btn-primary mt-3">Update
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/js/bootstrap.min.js"></script>
+	<script src="js/noty.js" type="text/javascript"></script>
+	<script src="js/dropzone.js"></script>
+	<script src="js/script.js"></script>
+</body>
+
+</html>

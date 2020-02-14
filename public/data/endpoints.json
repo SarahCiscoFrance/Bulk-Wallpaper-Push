@@ -1,0 +1,52 @@
+{
+  "Lounge": {
+    "Room Kit": {
+      "ip": "10.1.110.134",
+      "login": "admin",
+      "password": "C1sc0123"
+    },
+	"Room Kit Plus": {
+      "ip": "10.1.110.125",
+      "login": "admin",
+      "password": "C1sc0123"
+    }
+  },
+  "Kandinsky": {
+    "Room 55": {
+      "ip": "10.1.110.169",
+      "login": "admin",
+      "password": "C1sc0123"
+    },
+	"MX800": {
+      "ip": "10.1.110.160",
+      "login": "admin",
+      "password": "C1sc0123"
+    }
+  },
+  "Openspace": {
+    "Room Kit Plus": {
+      "ip": "10.1.110.145",
+      "login": "admin",
+      "password": "C1sc0123"
+    },
+	"Room Kit": {
+      "ip": "10.1.110.126",
+      "login": "integrator",
+      "password": "C1sc0123"
+    }
+  },
+  "Monet": {
+	"MX800": {
+      "ip": "10.1.110.153",
+      "login": "admin",
+      "password": "C1sc0123"
+    }
+  },
+  "Van Gogh": {
+    "SX80": {
+      "ip": "10.1.110.154",
+      "login": "admin",
+      "password": "C1sc0123"
+    }
+  }
+}
